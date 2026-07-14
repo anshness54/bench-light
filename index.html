@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BenchLight - Scientific Photography</title>
+    <!-- Import Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Import Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Add some basic font families matching the original design -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:wght@700&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        .font-serif { font-family: 'Merriweather', serif; }
+    </style>
+</head>
+<body class="min-h-screen bg-slate-50 text-slate-900">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white/90 backdrop-blur-md z-50 border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center space-x-2">
+                    <i data-lucide="microscope" class="h-8 w-8 text-blue-700"></i>
+                    <span class="font-serif text-2xl font-bold text-slate-900 tracking-tight">BenchLight.</span>
+                </div>
+                
+                <!-- Desktop Nav -->
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#mission" class="text-sm font-medium text-slate-600 hover:text-blue-700 transition-colors">Mission</a>
+                    <a href="#services" class="text-sm font-medium text-slate-600 hover:text-blue-700 transition-colors">Services</a>
+                    <a href="#approach" class="text-sm font-medium text-slate-600 hover:text-blue-700 transition-colors">Our Approach</a>
+                    <a href="#contact" class="px-5 py-2.5 bg-blue-700 text-white text-sm font-medium rounded-md hover:bg-blue-800 transition-colors shadow-sm">
+                        Partner With Us
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-slate-600 focus:outline-none">
+                        <i data-lucide="menu" id="menu-icon" class="h-6 w-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Nav (Hidden by default) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200 px-4 pt-2 pb-4 space-y-1">
+            <a href="#mission" class="block px-3 py-2 text-base font-medium text-slate-700 hover:bg-slate-50">Mission</a>
+            <a href="#services" class="block px-3 py-2 text-base font-medium text-slate-700 hover:bg-slate-50">Services</a>
+            <a href="#approach" class="block px-3 py-2 text-base font-medium text-slate-700 hover:bg-slate-50">Our Approach</a>
+            <a href="#contact" class="block px-3 py-2 text-base font-medium text-blue-700 hover:bg-slate-50">Partner With Us</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden" id="mission">
+        <div class="absolute inset-0 z-0">
+            <img 
+                src="https://images.unsplash.com/photo-1581093458791-9f3c3900df4b?auto=format&fit=crop&q=80&w=2000" 
+                alt="Scientific Laboratory" 
+                class="w-full h-full object-cover opacity-10"
+            >
+            <div class="absolute inset-0 bg-gradient-to-b from-slate-50/80 via-slate-50/95 to-slate-50"></div>
+        </div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="max-w-3xl">
+                <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-blue-100/50 text-blue-800 border border-blue-200 text-xs font-semibold uppercase tracking-wider mb-6">
+                    <span class="flex h-2 w-2 rounded-full bg-blue-600"></span>
+                    <span>Accepting Pilot Partnerships</span>
+                </div>
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-serif font-bold leading-tight text-slate-900 mb-6">
+                    Bridging the gap between <span class="text-blue-700">scientific research</span> and visual media.
+                </h1>
+                <p class="text-lg md:text-xl text-slate-600 mb-10 leading-relaxed max-w-2xl">
+                    We are a specialized creative initiative partnering with academic research labs to capture high-quality photography and elevate their science for the public, prospective students, and grant committees.
+                </p>
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="#services" class="inline-flex justify-center items-center px-6 py-3.5 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-blue-700 hover:bg-blue-800 transition-colors">
+                        Explore Our Services
+                    </a>
+                    <a href="#contact" class="inline-flex justify-center items-center px-6 py-3.5 border border-slate-300 text-base font-medium rounded-md text-slate-700 bg-white hover:bg-slate-50 transition-colors">
+                        Request a Consultation
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-white border-t border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl font-serif font-bold text-slate-900 mb-4">Core Services</h2>
+                <p class="text-lg text-slate-600">
+                    We provide comprehensive media solutions tailored specifically for the unique environment of academic and university research labs.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <!-- Service 1 -->
+                <div class="bg-slate-50 p-8 rounded-2xl border border-slate-100 hover:border-blue-100 hover:shadow-lg hover:shadow-blue-900/5 transition-all duration-300 group">
+                    <div class="w-14 h-14 bg-blue-100 text-blue-700 rounded-xl flex items-center justify-center mb-6 group-hover:bg-blue-700 group-hover:text-white transition-colors">
+                        <i data-lucide="camera" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Lab Media & Photography</h3>
+                    <p class="text-slate-600 leading-relaxed">
+                        High-resolution macro photography of experimental setups, equipment, and lab environments. Perfect for use in publications, academic presentations, and website galleries.
+                    </p>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="bg-slate-50 p-8 rounded-2xl border border-slate-100 hover:border-blue-100 hover:shadow-lg hover:shadow-blue-900/5 transition-all duration-300 group">
+                    <div class="w-14 h-14 bg-blue-100 text-blue-700 rounded-xl flex items-center justify-center mb-6 group-hover:bg-blue-700 group-hover:text-white transition-colors">
+                        <i data-lucide="users" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Team Portraits</h3>
+                    <p class="text-slate-600 leading-relaxed">
+                        Professional, on-location headshots of the Principal Investigator (PI), postdocs, and student researchers to humanize your lab culture and attract top talent.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Value Proposition Section -->
+    <section id="approach" class="py-20 bg-slate-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="text-3xl font-serif font-bold mb-6">Our Unique Value Proposition</h2>
+                    <p class="text-lg text-slate-300 mb-8 leading-relaxed">
+                        We aren't just commercial photographers; we are students of science. We understand the environment, the pace, and the nuances of academic research.
+                    </p>
+                    
+                    <div class="space-y-8">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 mt-1">
+                                <i data-lucide="shield-check" class="w-6 h-6 text-blue-400"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="text-xl font-bold">Scientific Literacy</h4>
+                                <p class="mt-2 text-slate-400">
+                                    We understand laboratory environments and safety protocols. This allows us to capture meaningful technical details without disrupting your critical research workflows or violating safety standards.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 mt-1">
+                                <i data-lucide="microscope" class="w-6 h-6 text-blue-400"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="text-xl font-bold">No-Cost Pilot Model</h4>
+                                <p class="mt-2 text-slate-400">
+                                    We are currently operating as a specialized student initiative. We deliver high-impact visual assets to academic spaces at absolutely no financial cost to your lab's budget.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="relative">
+                    <div class="absolute inset-0 bg-blue-600 rounded-2xl transform translate-x-4 translate-y-4 opacity-50"></div>
+                    <img 
+                        src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&q=80&w=1000" 
+                        alt="Scientist working in lab" 
+                        class="relative rounded-2xl shadow-2xl object-cover h-[500px] w-full grayscale contrast-125 hover:grayscale-0 transition-all duration-700"
+                    >
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process / CTA Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-serif font-bold text-slate-900 mb-6">Ready to elevate your lab's profile?</h2>
+            <p class="text-lg text-slate-600 mb-10">
+                We are currently accepting partnerships with university labs across the United States. There is absolutely no financial cost or logistical burden on your lab. We bring our own equipment and work quickly around your schedule.
+            </p>
+            
+            <div class="bg-slate-50 border border-slate-200 rounded-2xl p-8 md:p-12 text-center shadow-sm">
+                <h3 class="text-2xl font-bold text-slate-900 mb-4">Contact Us</h3>
+                <p class="text-slate-600 mb-8 max-w-2xl mx-auto">
+                    Send us an email to schedule a brief introductory chat. We'll discuss your visual needs and propose a custom timeline.
+                </p>
+                
+                <div class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-6">
+                    <a href="mailto:ansh.itchhaporia@gmail.com" class="flex items-center px-6 py-4 bg-white border border-slate-200 rounded-xl hover:border-blue-300 hover:shadow-md transition-all group w-full md:w-auto">
+                        <i data-lucide="mail" class="w-6 h-6 text-blue-700 mr-3 group-hover:scale-110 transition-transform"></i>
+                        <span class="text-lg text-slate-700 font-medium">ansh.itchhaporia@gmail.com</span>
+                    </a>
+                    
+                    <a href="mailto:ethany0817@gmail.com" class="flex items-center px-6 py-4 bg-white border border-slate-200 rounded-xl hover:border-blue-300 hover:shadow-md transition-all group w-full md:w-auto">
+                        <i data-lucide="mail" class="w-6 h-6 text-blue-700 mr-3 group-hover:scale-110 transition-transform"></i>
+                        <span class="text-lg text-slate-700 font-medium">ethany0817@gmail.com</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 border-t border-slate-800 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center">
+            <div class="flex items-center space-x-2 mb-4 md:mb-0">
+                <i data-lucide="microscope" class="h-6 w-6 text-slate-400"></i>
+                <span class="font-serif text-xl font-bold text-white tracking-tight">BenchLight.</span>
+            </div>
+            <p class="text-slate-400 text-sm text-center md:text-left">
+                &copy; <span id="year"></span> BenchLight Media. A student-led creative initiative.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Interactive Scripts -->
+    <script>
+        // Initialize the icons
+        lucide.createIcons();
+
+        // Update footer copyright year dynamically
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Mobile Menu Logic
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('menu-icon');
+        let isMenuOpen = false;
+
+        btn.addEventListener('click', () => {
+            isMenuOpen = !isMenuOpen;
+            
+            if (isMenuOpen) {
+                menu.classList.remove('hidden');
+                // Change icon to 'X' when open
+                btn.innerHTML = '<i data-lucide="x" class="h-6 w-6"></i>';
+            } else {
+                menu.classList.add('hidden');
+                // Change icon back to 'menu' when closed
+                btn.innerHTML = '<i data-lucide="menu" class="h-6 w-6"></i>';
+            }
+            // Re-render icons since we changed the HTML inside the button
+            lucide.createIcons();
+        });
+
+        // Close mobile menu when clicking a link
+        const mobileLinks = menu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                isMenuOpen = false;
+                menu.classList.add('hidden');
+                btn.innerHTML = '<i data-lucide="menu" class="h-6 w-6"></i>';
+                lucide.createIcons();
+            });
+        });
+    </script>
+</body>
+</html>
